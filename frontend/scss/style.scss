@@ -1,0 +1,202 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+
+  // all container which consists from other div and parts of html
+  #to-do-list {
+    width: 400px;
+    margin: 100px auto;
+    font-size: 20px;
+
+    //div belowe todolist which show misktake but in this case is invisible
+    .no-error{
+      color: red;
+      font-size: 20px;
+      text-align: center;
+      width: 400px;
+      margin: 0px auto;
+      margin-top: 70px;
+      height: 40px;
+      visibility: hidden;
+    }
+    //div belowe todolist which show misktake but in this case is visible
+    .show-error{
+      visibility: visible;
+      color: red;
+      font-size: 20px;
+      text-align: center;
+      width: 400px;
+      margin: 0px auto;
+      margin-top: 70px;
+      height: 40px;
+    }
+    // header first of elements id:todolist. has'ToDo list' word and it consists form 3 divs
+    header {
+      background-color: #2e3641;
+      color: lightgrey;
+      font-weight: bold;
+      width: 400px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+
+      //empty div
+      div:nth-of-type(1) {
+        width: 40px;
+        height: 40px;
+        float: left;
+      }
+
+      // div with lines
+      div:nth-of-type(2) {
+        height: 40px;
+        width: 10px;
+        border-left: 1px lightgrey solid;
+        border-right: 1px lightgrey solid;
+        float: left;
+      }
+
+      // div with word todo list
+      div:last-of-type {
+        float: left;
+        padding-left: 10px;
+      }
+
+      // last element whish has clear:both
+      div:last-of-type:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    }
+
+    //section with tasks
+    #tasks {
+
+      //whole div with checkbox text and lines and trash
+      .task-main-div {
+        color: lightgray;
+        border-right: 2px lightgray solid;
+        border-left: 2px lightgray solid;
+        border-bottom: 2px lightgray solid;
+        height: 40px;
+        display: flex;
+        align-items: center;
+      }
+      //checkbox
+      .input-checkbox {
+        width: 38px;
+        text-align: center;
+        float: left;
+      }
+
+      //lines
+      .div-with-lines {
+        float: left;
+        width: 10px;
+        height: 38px;
+        border-left: 1px lightcoral solid;
+        border-right: 1px lightcoral solid;
+        text-align: center;
+      }
+
+      //div with task text but when checkbox is unchecked
+      .task-text-div {
+        float: left;
+        width: 300px;
+        padding-left: 10px;
+        padding-right: 10px;
+        color: #2e3641;
+        font-size: 16px;
+      }
+      // div with task text but when checkbox is checked
+      .task-text-div-done {
+        float: left;
+        width: 300px;
+        padding-left: 10px;
+        padding-right: 10px;
+        color: #9eb2c0;
+        font-size: 16px;
+        text-decoration: line-through;
+      }
+
+      //div with trash
+      .trush {
+        width: 50px;
+        float: left;
+        text-align: center;
+      }
+
+      // last element whish has clear:both
+      div:last-of-type:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+    }
+    // last of elements id:todolist. Thanks to this element we are albe to add new tasks
+    // it is consists from 3 divs and one input
+    #new-task {
+      color: lightgray;
+      border-right: 2px lightgray solid;
+      border-left: 2px lightgray solid;
+      border-bottom: 2px lightgray solid;
+      height: 40px;
+      display: flex;
+      align-items: center;
+
+      // has '+' and on click event we add tasks
+      div:nth-of-type(1) {
+        float: left;
+        width: 38px;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      //it exists to have this same structures as other parts of to do lists and makes lines
+      div:nth-of-type(2) {
+        float: left;
+        width: 10px;
+        height: 38px;
+        border-left: 1px lightcoral solid;
+        border-right: 1px lightcoral solid;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      // we are able to add tasks
+      input {
+        border: 0;
+        float: left;
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 300px;
+        color: #2e3641;
+        font-size: 16px;
+
+        placeholder{
+          color: #2e3641;
+          font-size: 16px;
+        }
+      }
+
+
+      //it exists to have this same structures as other parts of to do lists
+      div:nth-of-type(3) {
+        width: 50px;
+        float: left;
+
+      }
+
+      // last element whish has clear:both
+      div:last-of-type:after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+    }
+  }
+}
