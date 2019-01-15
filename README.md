@@ -27,6 +27,13 @@
   <li>Saving previous tasks on server</li>  
 </ul>
 
+<h2>Live:</h2>
+<ul>
+	<li>https://rajmundw.github.io/ToDoList/frontend/</li>
+	<li>Preferred way of play application is installed on your devices</li>
+</ul>
+
+
 <h2>ToDo:</h2>
 <ul>
 	<li>add constructors</li>
